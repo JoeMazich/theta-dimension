@@ -1,15 +1,15 @@
 import React from "react";
-import logo from "./svg/logo.svg";
-import "./styles/App.css";
+import "./App.scss";
+import Card from "./components/common/Card";
 
-import NavigationBar from "./components/NavigationBar/NavigationBar";
+import Navigation from "./components/navigation/NavigationHandlerButton";
 
-function App() {
+const App = () => {
   return (
-    <>
-      <NavigationBar />
-    </>
+    <div className="App">
+      <Card />
+    </div>
   );
-}
+};
 
 export default App;

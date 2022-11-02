@@ -1,0 +1,17 @@
+@import "constants/variables";
+
+body {
+  margin: 0;
+  background-color: $color-white;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

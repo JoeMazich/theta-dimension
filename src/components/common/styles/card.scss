@@ -1,0 +1,30 @@
+@import "../../../constants/variables.scss";
+
+$card-width: 20;
+
+.card {
+  background-color: $color-primary;
+  aspect-ratio: 1 / 1.5;
+  position: relative;
+  width: $card-width + vmin;
+  overflow: hidden;
+}
+
+.card:hover:after {
+  transform: rotate(-90deg);
+}
+
+.card:after {
+  background: $color-secondary;
+  color: $color-dark;
+  font-size: 56px;
+  content: "Hello";
+  height: 100%;
+  pointer-events: none;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  transition: transform 300ms ease;
+  transform-origin: 0% 100.1%;
+  width: calc($card-width + $card-width * 1.5) + vmin;
+}
