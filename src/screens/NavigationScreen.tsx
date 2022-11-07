@@ -2,7 +2,7 @@ import React from "react";
 import Card from "../components/common/Card";
 
 const NavigationScreen = () => {
-  return <Card />;
+  return <></>;
 };
 
 export default NavigationScreen;

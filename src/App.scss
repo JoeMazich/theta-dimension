@@ -1,8 +1,14 @@
 @import "constants/variables";
+@import url("https://fonts.googleapis.com/css?family=Roboto&display=swap");
+
+* {
+  box-sizing: border-box;
+}
 
 body {
   margin: 0;
   background-color: $color-white;
+  font-family: "Roboto", sans-serif;
 }
 
 ::-webkit-scrollbar {
@@ -14,4 +20,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: $color-1-accent;
+}
+
+.nav-placement {
+  position: absolute;
+  top: 90%;
+  left: 5%;
 }
