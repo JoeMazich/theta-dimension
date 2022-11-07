@@ -1,0 +1,14 @@
+@import "../../constants/variables.scss";
+
+.proj_samples_layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+}
+
+.proj_samples_nav {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  border-radius: 1000px 1000px 1000px 0px;
+}

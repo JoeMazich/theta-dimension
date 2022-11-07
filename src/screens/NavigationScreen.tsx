@@ -1,8 +1,10 @@
-import React from "react";
-import Card from "../components/common/Card";
+import React, { useEffect, useState } from "react";
+import "./styles/navigation.scss";
 
-const NavigationScreen = () => {
-  return <></>;
+interface NavigationScreenProps {}
+
+const NavigationScreen = ({}: NavigationScreenProps) => {
+  return <div className="navigation">hello</div>;
 };
 
 export default NavigationScreen;

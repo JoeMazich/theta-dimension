@@ -4,8 +4,8 @@ nav {
   width: 5rem;
   height: 5rem;
   border-radius: 1000px;
-  background-color: $color-black;
-  transition: transform 300ms ease, width 600ms ease, height 600ms ease, border-radius 700ms ease;
+  background-color: $color-1-primary;
+  transition: transform 300ms ease, width 700ms ease, height 700ms ease, border-radius 700ms ease;
 }
 
 nav:hover {

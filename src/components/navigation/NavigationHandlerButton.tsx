@@ -1,6 +1,6 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import NavigationScreen from "../../screens/NavigationScreen";
-import "./styles.scss";
+import "./navigationStyles.scss";
 
 interface NavigationHandlerButtonProps {
   className?: string;
@@ -8,14 +8,19 @@ interface NavigationHandlerButtonProps {
 
 const NavigationHandlerButton = ({ className }: NavigationHandlerButtonProps) => {
   const navElement = useRef<HTMLElement>(null);
+  const [navOpen, SetNavOpen] = useState(false);
 
   const handleOnClick = () => {
-    navElement.current!.dataset.navOpen = "true";
+    SetNavOpen(!navOpen);
   };
+
+  useEffect(() => {
+    navElement.current!.dataset.navOpen = String(navOpen);
+  }, [navOpen]);
 
   return (
     <nav ref={navElement} onClick={handleOnClick} className={className}>
-      <NavigationScreen />
+      {navOpen && <NavigationScreen />}
     </nav>
   );
 };
