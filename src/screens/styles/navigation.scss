@@ -1,3 +1,24 @@
-.navigation {
-  background-color: red;
+@import "../../constants/variables.scss";
+
+.nav-screen {
+  width: 100%;
+  height: 100%;
+  padding: 5rem;
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-template-rows: 2fr 1fr;
+  gap: 5rem;
+}
+
+.nav-screen > div {
+  background-color: $color-2-accent;
+  border-radius: 5px;
+  width: 0%;
+  height: 0%;
+  transition: width 500ms ease-in-out, height 500ms ease-in-out;
+}
+
+nav[data-nav-open-screen="true"] > .nav-screen > div {
+  width: 100%;
+  height: 100%;
 }

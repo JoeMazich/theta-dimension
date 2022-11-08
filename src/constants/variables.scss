@@ -11,3 +11,9 @@ $color-2-accent: #ee9b00;
 $color-grey: #c0c0c0;
 $color-black: #000;
 $color-white: #fff;
+
+$nav-transition-time: 700ms;
+
+:export {
+  navTransitionTime: $nav-transition-time;
+}

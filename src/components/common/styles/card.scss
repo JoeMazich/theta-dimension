@@ -1,13 +1,13 @@
 @import "../../../constants/variables.scss";
 
-$card-width: 40vmin;
+$card-width: 30rem;
 
 .card {
   cursor: default;
   position: absolute;
   background-color: $color-1-primary-light;
   color: $color-1-primary-dark;
-  aspect-ratio: 1.6 / 1;
+  aspect-ratio: 1.9 / 1;
   position: relative;
   width: $card-width;
   font-size: 25px;
@@ -18,10 +18,17 @@ $card-width: 40vmin;
   justify-content: center;
   text-align: center;
   align-items: center;
+
+  transition: transform 200ms ease, border-radius 200ms ease;
+}
+
+.card:active {
+  transform: scale(0.9);
+  border-radius: 10px;
 }
 
 .card-body {
-  min-height: 50%;
+  min-height: 75%;
   display: flex;
   text-align: center;
   align-items: center;

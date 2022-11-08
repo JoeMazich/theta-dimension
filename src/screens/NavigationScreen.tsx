@@ -4,7 +4,14 @@ import "./styles/navigation.scss";
 interface NavigationScreenProps {}
 
 const NavigationScreen = ({}: NavigationScreenProps) => {
-  return <div className="navigation">hello</div>;
+  return (
+    <div className="nav-screen">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  );
 };
 
 export default NavigationScreen;

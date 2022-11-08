@@ -5,7 +5,8 @@ nav {
   height: 5rem;
   border-radius: 1000px;
   background-color: $color-1-primary;
-  transition: transform 300ms ease, width 700ms ease, height 700ms ease, border-radius 700ms ease;
+  transition: transform 300ms ease, width $nav-transition-time ease, height $nav-transition-time ease,
+    border-radius $nav-transition-time ease;
 }
 
 nav:hover {
