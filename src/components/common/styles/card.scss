@@ -1,12 +1,12 @@
 @import "../../../constants/variables.scss";
 
-$card-width: 30rem;
+$card-width: 45vmin;
 
 .card {
   cursor: default;
   position: absolute;
   background-color: $color-1-primary-light;
-  color: $color-1-primary-dark;
+  color: $color-black;
   aspect-ratio: 1.9 / 1;
   position: relative;
   width: $card-width;
@@ -32,6 +32,7 @@ $card-width: 30rem;
   display: flex;
   text-align: center;
   align-items: center;
+  padding: 10px;
 }
 
 .card-sweep {
@@ -51,6 +52,7 @@ $card-width: 30rem;
   pointer-events: none;
   cursor: default;
   background-color: $color-1-accent;
+  color: $color-1-primary;
   height: inherit;
   width: inherit;
   position: absolute;

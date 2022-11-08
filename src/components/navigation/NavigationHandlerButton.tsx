@@ -1,7 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
-import NavigationScreen from "../../screens/NavigationScreen";
 import "./navigationStyles.scss";
 
+import React, { useEffect, useRef, useState } from "react";
+
+import NavigationScreen from "../../screens/NavigationScreen";
 import timings from "../../constants/variables.scss";
 
 interface NavigationHandlerButtonProps {
@@ -13,15 +14,23 @@ const NavigationHandlerButton = ({ className }: NavigationHandlerButtonProps) =>
   const [navOpen, SetNavOpen] = useState(false);
 
   const handleOnClick = () => {
-    SetNavOpen(!navOpen);
+    SetNavOpen(true);
   };
 
   useEffect(() => {
-    navElement.current!.dataset.navOpen = String(navOpen);
+    if (!navOpen) {
+      setTimeout(() => {
+        navElement.current!.dataset.navOpen = String(navOpen);
+      }, timings.navTransitionTime.replace("ms", ""));
 
-    setTimeout(() => {
       navElement.current!.dataset.navOpenScreen = String(navOpen);
-    }, timings.navTransitionTime.replace("ms", ""));
+    } else {
+      navElement.current!.dataset.navOpen = String(navOpen);
+
+      setTimeout(() => {
+        navElement.current!.dataset.navOpenScreen = String(navOpen);
+      }, timings.navTransitionTime.replace("ms", ""));
+    }
   }, [navOpen]);
 
   return (
